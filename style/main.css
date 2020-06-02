@@ -6,6 +6,8 @@
 *{
     margin: 0;
     padding: 0;
+    /*O preenchimento é limitado pela borda*/
+    box-sizing: border-box;
 }
 
 html {
