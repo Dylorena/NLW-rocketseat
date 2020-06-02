@@ -8,22 +8,67 @@
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;600&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./style/main.css">
+        <link rel="stylesheet" href="./style/create-point.css">
         <link rel="stylesheet" href="./style/responsive.css">
     </head>
     <body>
         <div id="page-create-point">
                 <header>
                     <img src="./assets/logo.svg" alt="Logomarca"> 
-                    <a href="#">
+                    <a href="index.html">
                         <span> </span>
-                         Voltar para home</a>   
+                         Voltar para home
+                    </a>   
                 </header>
 
-                <main>
-                    <h1>Seu marketplace de coleta de resíduos.</h1>
-                    <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
-                    <a href="#"> <span></span> <strong>Pesquisar pontos de coleta</strong></a>
-                </main>  
-        </div>        
+                <form action="">
+                    <h1>Cadastro do ponto de coleta</h1>
+                    <fieldset>
+                        <legend>
+                            <h2>Dados da Entidade</h2>
+                        </legend>
+
+                        <div class="field">
+                            <label for="name">Nome da entidade</label>
+                            <input type="text" name="name">
+                        </div>
+
+                        <div class="field-group">
+                            <div class="field">
+                                <label for="address">Endereço</label>
+                                <input type="text" name="address">
+                            </div>
+                            <div class="field">
+                                <label for="address2">Número/Complemento</label>
+                                <input type="text" name="address2">
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <div class="field">
+                                <label for="state">Estado</label>
+                                <select name="UF">
+                                    <option value="">Selecione o Estado</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="city">Cidade</label>
+                                <select name="" disabled>
+                                    <option value="">Selecione a Cidade</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>
+                            <h2>Itens de coleta</h2>
+                        </legend>
+                    </fieldset>
+
+                    <button type="submit">Cadastrar ponto de coleta</button>
+                </form>  
+        </div>  
+    <script src="./scripts/create-point.js"></script>      
     </body>
 </html>
