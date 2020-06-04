@@ -38,3 +38,42 @@ populateufs();
 
 document.querySelector("select[name=uf]")
     .addEventListener("change", getCities)
+
+// ////////////////////////// itens de coleta
+
+// Retornará um array de li
+const itemsToCollect = document.querySelectorAll(".items-grid li")
+
+for(const item of itemsToCollect){
+    item.addEventListener("click",handleSelectedItem)
+}
+
+let selectedIems = []
+const collectedItems = document.querySelector("input[name=item]")
+
+function handleSelectedItem(event){
+
+    const itemLi = event.target 
+    const itemID = event.target.dataset.id
+
+    /* adicionar ou remover classe com javascript
+    classList.add("selected") - Adicionar uma classe), classList.remove("selected")*/
+    itemLi.classList.toggle("selected") //Adiciona se não tem, remove se tem
+
+    //retorna true ou false
+    const alreadySelected = selectedIems.findIndex(item => item == itemID)
+    
+    
+
+    if(alreadySelected >= 0){
+
+        // Filtereditems será um novo array com o resultado da função filter
+        const filtereditems = selectedIems.filter(item => item != itemID)
+
+        selectedIems = filtereditems
+    } else {
+        selectedIems.push(itemID)
+    }   
+
+    collectedItems.value = selectedIems
+}
