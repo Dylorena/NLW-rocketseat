@@ -9,6 +9,10 @@ Aprendendo conhecimentos no package **Express** para configuração de servidor 
 $ npm init -y // transformar pasta em projeto "rodável"
 $ node ou nodemon src/server.js //Inicializa o arquivo configurado como servidor.
 
+n-extends = Cria os extends
+n-blocks = Cria os blocos
+n-set = cria variáveis
+
 
 ### Dependências
 
