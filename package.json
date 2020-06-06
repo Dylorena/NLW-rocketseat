@@ -1,0 +1,25 @@
+{
+  "name": "NLW",
+  "version": "1.0.0",
+  "description": "Código de acompanhamento da Next Level Week. Aprimorando conhecimentos em HTML, CSS e responsividade.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dylorena/NLW-rocketseat.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Dylorena/NLW-rocketseat/issues"
+  },
+  "homepage": "https://github.com/Dylorena/NLW-rocketseat#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
