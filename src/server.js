@@ -57,21 +57,28 @@ server.post("/savepoint", (req,res) => {
         console.log("cadastrado com sucesso")
         console.log(this)
 
+        return res.render("create-point.html", {saved: true})
     }
     db.run( query, values, afterInsertData )
 })
 
 server.get("/search-results", (req,res) => {
-    
-    // pegar os dados do banco de dados
-    db.all( 'SELECT * FROM places', function(err,rows){
+    const search = req.query.search
+
+    if(search == ""){
+        return res.render("search-results.html", {total: 0})
+    }
+
+        // pegar os dados do banco de dados
+    db.all( `SELECT * FROM places WHERE CITY LIKE  '%${search}%' `, function(err,rows){
         if (err) {
             return console.log(err)
         }
     
         const total = rows.length
     // mostrar pagina html com os dados do bd
-    return res.render("search-results.html", { places: rows, total})
+        return res.render("search-results.html", {places: rows, total:total})
+    
     })
 })
 
